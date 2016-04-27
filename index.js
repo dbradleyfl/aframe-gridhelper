@@ -3,42 +3,35 @@ if (typeof AFRAME === 'undefined') {
 }
 
 /**
- * Example component for A-Frame.
+ * GridHelper component for A-Frame.
  */
-AFRAME.registerComponent('example', {
-  schema: { },
+AFRAME.registerComponent('gridhelper', {
+  schema: {
+    size: { default: 10 },
+    step: { default: 1 },
+    colorCenterLine: {default: "red"},
+    colorGrid: {default: "black"}
+  },
 
   /**
    * Called once when component is attached. Generally for initial setup.
    */
-  init: function () { },
+  init: function () {
+    var scene = this.el.object3D;
+    var data = this.data;
 
-  /**
-   * Called when component is attached and when component data changes.
-   * Generally modifies the entity based on the data.
-   */
-  update: function (oldData) { },
+    var size = data.size;
+    var step = data.step;
+    var colorCenterLine = data.colorCenterLine;
+    var colorGrid = data.colorGrid;
 
-  /**
-   * Called when a component is removed (e.g., via removeAttribute).
-   * Generally undoes all modifications to the entity.
-   */
-  remove: function () { },
-
-  /**
-   * Called on each scene tick.
-   */
-  // tick: function (t) { },
-
-  /**
-   * Called when entity pauses.
-   * Use to stop or remove any dynamic or background behavior such as events.
-   */
-  pause: function () { },
-
-  /**
-   * Called when entity resumes.
-   * Use to continue or add any dynamic or background behavior such as events.
-   */
-  play: function () { },
+    var gridHelper = new THREE.GridHelper( size, step );
+    gridHelper.setColors(colorCenterLine, colorGrid);
+    gridHelper.name = "gridHelper";
+    scene.add(gridHelper);
+  },
+  remove: function () {
+    var scene = this.el.object3D;
+    scene.remove(scene.getObjectByName("gridHelper"));
+  }
 });
