@@ -1,6 +1,6 @@
 {
   "name": "aframe-gridhelper-component",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A grid plane helper for editors or easier editing.",
   "main": "index.js",
   "scripts": {
