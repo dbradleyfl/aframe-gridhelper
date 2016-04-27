@@ -25,8 +25,8 @@ Install and use by directly including the [browser files](dist):
 </head>
 
 <body>
-  <a-scene>
-    <a-entity gridhelper></a-entity>
+  <a-scene gridhelper>
+    <a-entity geometry="primitive: box" material="color: #C03546"></a-entity>
   </a-scene>
 </body>
 ```
