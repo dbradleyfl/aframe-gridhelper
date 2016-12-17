@@ -25,8 +25,7 @@ AFRAME.registerComponent('gridhelper', {
     var colorCenterLine = data.colorCenterLine;
     var colorGrid = data.colorGrid;
 
-    var gridHelper = new THREE.GridHelper( size, step );
-    gridHelper.setColors(colorCenterLine, colorGrid);
+    var gridHelper = new THREE.GridHelper( size, step, colorCenterLine, colorGrid );
     gridHelper.name = "gridHelper";
     scene.add(gridHelper);
   },
