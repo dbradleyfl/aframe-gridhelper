@@ -9,8 +9,8 @@ AFRAME.registerComponent('gridhelper', {
   schema: {
     size: { default: 10 },
     step: { default: 1 },
-    colorCenterLine: {default: "red"},
-    colorGrid: {default: "black"}
+    colorCenterLine: {default: 0xff0000},
+    colorGrid: {default: 0x000000}
   },
 
   /**
