@@ -71,8 +71,9 @@
 	    var colorCenterLine = data.colorCenterLine;
 	    var colorGrid = data.colorGrid;
 
-	    var gridHelper = new THREE.GridHelper( size, step, colorCenterLine, colorGrid );
-	    gridHelper.name = "gridHelper";
+	    // var gridHelper = new THREE.GridHelper( size, step, colorCenterLine, colorGrid );
+	    // gridHelper.name = "gridHelper";
+	    var gridHelper = new THREE.GridHelper( 5, 0.5, 'red', 'black' );
 	    scene.add(gridHelper);
 	  },
 	  remove: function () {
