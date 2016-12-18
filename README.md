@@ -7,7 +7,7 @@ A GridHelper component for [A-Frame](https://aframe.io).
 | Property         | Description | Default Value |
 | ---------------- | ----------- | ------------- |
 | size             |             | 5             |
-| step             |             | 10            |
+| divisions        |             | 10            |
 | colorCenterLine  |             | red           |
 | colorGrid        |             | black         |
 
