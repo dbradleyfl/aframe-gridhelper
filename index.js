@@ -27,7 +27,7 @@ AFRAME.registerComponent('gridhelper', {
 
     // var gridHelper = new THREE.GridHelper( size, step, colorCenterLine, colorGrid );
     // gridHelper.name = "gridHelper";
-    var gridHelper = new THREE.GridHelper( 5, 0.5, 'red', 'black' );
+    var gridHelper = new THREE.GridHelper( 5, 10, 'red', 'black' );
     scene.add(gridHelper);
   },
   remove: function () {
