@@ -7,10 +7,10 @@ if (typeof AFRAME === 'undefined') {
  */
 AFRAME.registerComponent('gridhelper', {
   schema: {
-    size: { default: 10 },
-    step: { default: 1 },
-    colorCenterLine: {default: 0xff0000},
-    colorGrid: {default: 0x000000}
+    size: { default: 5 },
+    divisions: { default: 10 },
+    colorCenterLine: {default: 'red'},
+    colorGrid: {default: 'black'}
   },
 
   /**
@@ -21,13 +21,12 @@ AFRAME.registerComponent('gridhelper', {
     var data = this.data;
 
     var size = data.size;
-    var step = data.step;
+    var divisions = data.divisions;
     var colorCenterLine = data.colorCenterLine;
     var colorGrid = data.colorGrid;
 
-    // var gridHelper = new THREE.GridHelper( size, step, colorCenterLine, colorGrid );
-    // gridHelper.name = "gridHelper";
-    var gridHelper = new THREE.GridHelper( 5, 10, 'red', 'black' );
+    var gridHelper = new THREE.GridHelper( size, divisions, colorCenterLine, colorGrid );
+    gridHelper.name = "gridHelper";
     scene.add(gridHelper);
   },
   remove: function () {
